@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Header from "./components/header/header.jsx";
+import Header from './components/Header/header.component.jsx';
+import Footer from './components/Footer/footer.component.jsx';
 
 const AppWrapper = styled.div({
   height: '120px',
@@ -33,6 +34,7 @@ const App = () => (
         <Title>Our is working :)</Title>
       </CardWrapper>
     </AppWrapper>
+    <Footer />
   </div>
 );
 
