@@ -1,24 +1,41 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import styled from '@emotion/styled';
 
-import './App.css';
+import Header from './components/Header/header.component.jsx';
+import Footer from './components/Footer/footer.component.jsx';
 
-import HomePage from './pages/Home';
-import SignInPage from './pages/SignIn';
-import Header from './components/Header/header.component';
-import Footer from './components/Footer/footer.component';
+const AppWrapper = styled.div({
+  height: '120px',
+  width: '100%',
+  display: 'flex',
+});
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/signin" component={SignInPage} />
-      </Switch>
-      <Footer />
-    </div>
-  );
-}
+const Title = styled.h1({
+fontSize: '40px',
+});
+
+const CardWrapper = styled.div({
+  width: '300px',
+  height: '400px',
+  padding: '50px',
+  borderRadius: '15px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifContent: 'center',
+  backgroundColor: 'lightblue',
+});
+
+const App = () => (
+  <div>
+    <Header />
+    <AppWrapper>
+      <CardWrapper>
+        <Title>Our is working :)</Title>
+      </CardWrapper>
+    </AppWrapper>
+    <Footer />
+  </div>
+);
 
 export default App;
