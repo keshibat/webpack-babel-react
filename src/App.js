@@ -1,12 +1,38 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
-import './App.css';
-import Header from './components/Header/header.component';
+import Header from "./components/header/header.jsx";
+
+const AppWrapper = styled.div({
+  height: '120px',
+  width: '100%',
+  display: 'flex',
+});
+
+const Title = styled.h1({
+fontSize: '40px',
+});
+
+const CardWrapper = styled.div({
+  width: '300px',
+  height: '400px',
+  padding: '50px',
+  borderRadius: '15px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifContent: 'center',
+  backgroundColor: 'lightblue',
+});
 
 const App = () => (
-  <div className='app'>
-  <Header />
-      <h1>hello hell0 world!!!!!</h1>
+  <div>
+    <Header />
+    <AppWrapper>
+      <CardWrapper>
+        <Title>Our is working :)</Title>
+      </CardWrapper>
+    </AppWrapper>
   </div>
 );
 
