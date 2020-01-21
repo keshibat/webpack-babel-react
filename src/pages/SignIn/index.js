@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import SignIn from '../../components/SignIn/sign-in.component';
+import SignIn from '../../components/SignIn/sign-in.component.jsx';
 
 const SignPageWrapper = styled.div({
   width: '100vw',
@@ -11,7 +11,7 @@ const SignPageWrapper = styled.div({
 
 const SignInPage = () => (
   <SignPageWrapper>
-    <h1>aaa</h1>
+    <SignIn />
   </SignPageWrapper>
 );
 

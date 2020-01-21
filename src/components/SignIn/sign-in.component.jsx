@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import FormInput from '../FormInput/form-input.component';
-import CustomButton from '../CustomButton/custom-button.component';
-import ForgetPassword from '../ForgetPassword/forget-password.component';
+import FormInput from '../FormInput/form-input.component.jsx';
+import CustomButton from '../CustomButton/custom-button.component.jsx';
+import ForgetPassword from '../ForgetPassword/forget-password.component.jsx';
 
 const SignInWrapper = styled.div({
   width: '380px',
