@@ -1,6 +1,12 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    port: 3300,
+    watchContentBase: true,
+    open: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {

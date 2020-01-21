@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ReactComponent as Logo } from '../../assets/classiii-logo.svg';
-// import { ReactComponent as ThemeIcon } from '../../assets/theme-icon.svg';
-// import { ReactComponent as LangIcon } from '../../assets/lang-icon.svg';
+import { ReactComponent as ThemeIcon } from '../../assets/theme-icon.svg';
+import { ReactComponent as LangIcon } from '../../assets/lang-icon.svg';
 
 const HeaderWrapper = styled.div({
   height: '120px',
@@ -44,10 +44,12 @@ const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
       <LogoContainer>
-      <Logo />
+        <Logo />
         <CompanyName> CLASSIII API</CompanyName>
       </LogoContainer>
       <IconContainer>
+        <ThemeIcon />
+        <LangIcon style={{ margin: '0 0 0 15px' }} />
       </IconContainer>
     </HeaderContainer>
   </HeaderWrapper>
