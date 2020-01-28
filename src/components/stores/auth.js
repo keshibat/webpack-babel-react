@@ -7,7 +7,7 @@ const auth = {
   signout(callback) {
     auth.isAuthenticated = false;
     setTimeout(callback, 100);
-  }
-}
+  },
+};
 
 export default auth;

@@ -35,6 +35,13 @@ module.exports = {
         use: ['@svgr/webpack', 'url-loader'],
       },
       {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
         test: /\.html$/,
         use: [
           {
