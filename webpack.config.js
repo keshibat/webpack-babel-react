@@ -1,14 +1,15 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  // This is default for webpack if you don't specify entry and output
-  // entry: './src',
-  // output: {
-  //   filename: '[name].js',
-  //   path: __dirname + '/dist'
-  // },
+  entry: path.resolve(__dirname, 'src/index.js'),
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index_bundle.js',
+    publicPath: '/',
+  },
   devServer: {
-    port: 3300,
+    port: 3600,
     watchContentBase: true,
     open: true,
     historyApiFallback: true,
@@ -23,7 +24,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -33,21 +34,6 @@ module.exports = {
       {
         test: /\.svg$/,
         use: ['@svgr/webpack', 'url-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
       },
     ],
   },
@@ -59,7 +45,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './index.html',
+      favicon: './public/favicon.png',
+      template: './public/index.html',
+      filename: './index.html',
     }),
   ],
 };

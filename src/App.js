@@ -1,41 +1,11 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from 'react';
 
-import './App.css';
+const App = () => {
+  return (
+    <div>
+      <h1>Hello world</h1>
 
-import HomePage from './pages/Home';
-import SignInPage from './pages/SignIn';
-import Header from './components/Header/header.component';
-import Footer from './components/Footer/footer.component';
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Header />
-//       <Switch>
-//         <Route exact path="/" component={HomePage} />
-//         <Route path="/signin" component={SignInPage} />
-//       </Switch>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default App;
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/signin" component={SignInPage} />
-        </Switch>
-        <Footer />
-      </div>
-    );
-  }
-}
-
+    </div>
+  );
+};
 export default App;
